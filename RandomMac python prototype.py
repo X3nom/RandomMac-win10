@@ -10,4 +10,5 @@ for i in range(3):
     adress += hex_num
 print(adress)
 
-# Work In Progress
+# write new mac to registry
+os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0011" /v NetworkAddress /d '+adress+' /f >null')
